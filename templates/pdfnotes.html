@@ -1,0 +1,57 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+		</style>
+	<link rel="stylesheet" type="text/css" href=" {% static "openlib.css" %}">
+	<title>openlibrary kenya</title>
+</head>
+<body>
+ <div class="container">
+     <header>
+         <h1 class="font"><u>openlibrary kenya</u></h1>
+    </header>
+     <nav>
+     <p>you can download and upload any notes</p>
+        
+     </nav>
+     <main>
+     <div class="main">
+     <p>pdf notes of our open source library</p>
+     <div class="main">
+     <form action="notess" method="POST" enctype="multipart/form-data">
+     {% csrf_token %}
+     <p>upload your notes here</p>
+     unit code:<br>
+     <input type="text" name ="unitcode" placeholder="ICS 2204"><br>
+     unit name:<br>
+     <input type="text" name="unitname"><br>
+     upload your file:<br>
+     
+     <input type="file"name="pdf" ><br>
+     <input type="submit"value ="submit">
+     </form>
+      </div>
+
+      <div class="section">
+
+     <form  method ='POST' action='searchnotes'>
+     {% csrf_token %}
+     <p>download the notes here</p>
+     <input type="text" placeholder="enter unitcode" name='unitcode'>
+     <input type="submit"value ="submit">
+     </form>
+     </div>
+     </main>
+         
+         
+    
+     <footer>
+         <p class="small">inspired by aoron swartz</p>
+    
+     </footer>
+     </div>
+   
+
+</body>
+</html>
