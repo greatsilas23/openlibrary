@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<title>Game</title>
+	</head>
+	<body>
+		<canvas id="id001"></canvas>
+	</body>
+<script>
+	class Jet{
+		constructor(x, y){
+			this.x = x
+			this.y = y 
+		}
+		move(choice){
+			(choice) ? this.x++ : this.x-- 
+		}
+		shoot(){
+			this.y++
+		}
+		collision(x, y){
+			x.style.top.equal(y.style.top) ? console.log('hit') : console.log('miss')
+		}
+	}
+	$('canvas#id001').innerHTML += new Jet('001','050')
+
+	window.onload( setInterval(() => $('canvas#id001').innerHTML += Math.random(9)))
+</script>
+</html>
