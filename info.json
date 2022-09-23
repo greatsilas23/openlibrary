@@ -1,0 +1,19 @@
+{
+  {
+    id: "001",
+    name: "small",
+    description: "short survey to get user info"
+  },
+  {
+    id: "002",
+    name: "medium",
+    description: "questionnaire to obtain data of a user's module"
+  }
+  {
+    id: "003",
+    name: "comprehensive",
+    description: "progressive questionnaire"
+  }
+}
+
+
